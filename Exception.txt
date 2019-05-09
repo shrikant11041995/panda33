@@ -1,0 +1,44 @@
+package practice;
+class myexception extends Exception
+{
+
+	public myexception(String message) {
+		super(message);
+		
+	}
+	
+	
+}
+class calc
+{
+	public int doul(int num)throws  myexception 
+	
+	{
+		if(num<0)
+		{
+			throw new  myexception ("negative not alloweed");
+		}return num+num;
+	}
+}
+
+public class madhavi 
+{
+
+	public static void main(String[] args) 
+	{
+		calc c=new calc();
+		int result;
+		
+		try
+		{
+			result=c.doul(9);
+			System.out.println(result);
+		} 
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+
+}
